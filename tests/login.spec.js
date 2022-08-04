@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('https://cendex.systest.gb.docker.xhrdev.net/');
+  await page.goto('url');
  
 });
 
@@ -11,8 +11,8 @@ test.describe('login', () => {
         await page.locator('text=Accept All Cookies').click();
         await page.locator('id=log-in').click();
             
-        await page.fill('#Username', 'Cendexess@xperthr.co.uk');
-        await page.fill('#Password', 'Password1');
+        await page.fill('#Username', 'username');
+        await page.fill('#Password', 'password');
       
         await page.locator('id=LoginButton').click();
       
